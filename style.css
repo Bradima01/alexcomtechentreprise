@@ -209,12 +209,10 @@ header {
 }
 .contact {
   background: #111;
-  pointer-events: none;
   color: white;
   padding: 60px 20px;
   text-align: center;
   text-decoration: none;
-  pointer-events: none;
   width: 100%;
 }
 .contact h2 h3 p iframe{
@@ -311,7 +309,7 @@ footer img{
     flex-direction: column;
     background: #111;
     position: absolute;
-    top: 60px;
+    top: 30px;
     right: 0;
     width: 100%;
     display: none;
