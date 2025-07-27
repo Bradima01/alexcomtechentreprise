@@ -124,7 +124,6 @@ header {
 .light {
   text-decoration: none;
   background: black;
-  pointer-events: none;
   width: 100%;
 }
 .light iframe{
@@ -217,7 +216,6 @@ header {
 }
 .contact h2 h3 p iframe{
   text-decoration: none;
-  pointer-events: none;
 }
 
 /* Footer */
