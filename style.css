@@ -5,6 +5,7 @@
 }
 
 body {
+  overflow-x: hidden;
   font-family: 'Segoe UI', sans-serif;
   background: #fff;
   color: #333;
@@ -27,10 +28,23 @@ header {
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  width: 20vh;
+  height: 15vh;
+  border-right: 1px solid #ddd;
 }
-
+.logo img {
+  width: 100%;
+  height: auto;
+}
+.logo__1{
+   width: 25vh;
+  height: 25vh;
+  margin: auto;
+}
+.logo__1 img{
+  width: 100%;
+  height: auto;
+}
 .nav-links {
   list-style: none;
   display: flex;
@@ -58,7 +72,7 @@ header {
 
 /* Hero Section */
 .hero {
-  background-image: url(images/b5.jpg);
+  background-image: url(images/b8.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -84,29 +98,56 @@ header {
 
 /* Sections */
 .section {
-  padding: 60px 20px;
-  max-width: 1000px;
+  padding: 30px 20px;
+  width: 100%;
   margin: auto;
   text-align: center;
   background-image: url(images/b5.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  text-decoration: none;
 }
-
+.section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+  text-decoration: none;
+}
 .section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
   color: white;
+  text-decoration: none;
 }
 
-.light-bg {
+.light {
+  text-decoration: none;
   background: black;
+  pointer-events: none;
+  width: 100%;
 }
-.light-bg p{
+.light iframe{
+  width: 80%;
+  align-self: center;
+  height: 50vh;
+  margin: 20px auto;
+}
+.light p{
   color: #fff;
+  text-decoration: none;
 }
+.light h3{
+  color: #ddd;
+  text-decoration: none;
+}
+/*#products {
+  display: flex;
+  flex-direction: colomn;
+  align-items: center;
+  padding: 60px 20px;
 
+}*/
 .product-grid {
   display: flex;
   gap: 20px;
@@ -115,11 +156,11 @@ header {
 }
 
 .product-card {
-  background: #fff;
+  background: #000;
   border: 1px solid #ddd;
   padding: 15px;
   border-radius: 10px;
-  width: 200px;
+  width: 300px;
   text-align: center;
 }
 
@@ -127,17 +168,58 @@ header {
   width: 100%;
   border-radius: 10px;
 }
-
+.product-card h3{
+  color: #ddd;
+  padding: 7px;
+}
+.product-card p{
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+}
+.product-card span{
+  color: rgb(14, 248, 220);
+}
+.work{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .testimonial {
+  width: 20%;
   margin-top: 20px;
   font-style: italic;
-}
-.testimonial p{
-  color: #fff;
   cursor: pointer;
+  margin: auto;
 }
+
 .testimonial h4{
-  color: #000;
+  color: #ddd;
+}
+.testimonial img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.testimonial a{
+  text-decoration: none;
+  color: #fff;
+}
+.contact {
+  background: #111;
+  pointer-events: none;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  text-decoration: none;
+  pointer-events: none;
+  width: 100%;
+}
+.contact h2 h3 p iframe{
+  text-decoration: none;
+  pointer-events: none;
 }
 
 /* Footer */
@@ -153,11 +235,75 @@ footer p{
   font-size: 14px;
   font-weight: 300;
   font-style: italic;
+  margin: 10px 0;
+  text-decoration: none;
+  pointer-events: none;
 }
 footer img{
   width: 49vh;
   height: 49vh;
   align-self: center;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+#more{
+  display: flex;
+  background-image: url(images/b8.jpg);
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.more-card{
+  background: #000;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  padding: 15px;
+  border-radius: 10px;
+  width: 90%;
+  text-align: center;
+}
+.more-card h3{
+  color: rgb(210, 66, 66);
+  padding: 15px;
+  font-style: italic;
+  width: 500px;
+  font-size: 30px;
+  font-weight: 700;
+  align-self: center;
+  margin: auto;
+}
+.more-card p{
+  color: rgb(27, 242, 134);
+  font-size: 20px;
+  padding: 10px;
+}
+.more-card span{
+  color: #ddd;
+  margin: auto;
+  padding: 15px;
+}
+.testimonial__1{
+  width: 20%;
+  margin-top: 20px;
+  font-style: italic;
+  cursor: pointer;
+  margin: auto;
+}
+.testimonial__1 h4{
+  color: rgb(27, 242, 134);
+  font-size: 25px;
+  font-weight: 700;
+}
+.work__1{
+   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.work__1 span{
+  color: #000;
 }
 /* Responsive */
 @media (max-width: 768px) {
@@ -169,6 +315,17 @@ footer img{
     right: 0;
     width: 100%;
     display: none;
+  }
+  .logo{
+    font-size: 10px;
+  font-weight: bold;
+  border-right: 1px solid #ddd;
+  padding-right: 5px;
+  }
+  .hero-content h1{
+    font-size: 18px;
+    font-weight: 800;
+    font-style: oblique;
   }
 
   .nav-links.show {
@@ -187,4 +344,85 @@ footer img{
     flex-direction: column;
     align-items: center;
   }
+  .product-card{
+    width: 80%;
+    align-self: center;
+  }
+  .work{
+  width: 100%;
+  display: block;
+  justify-content: center;
+}
+.testimonial {
+  width: 60%;
+  margin-top: 20px;
+  font-style: italic;
+  margin: auto;
+}
+  footer img{
+    width: 20%;
+    height: 20%;
+  }
+  #more{
+  display: flex;
+  background-image: url(images/b3.jpg);
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.more-card{
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 5px;
+  border-radius: 10px;
+  width: 90%;
+  text-align: center;
+}
+.more-card h3{
+  color: rgb(210, 66, 66);
+  padding: 5px;
+  font-style: italic;
+  width: 250px;
+  font-size: 14px;
+  font-weight: 700;
+  align-self: center;
+  margin: auto;
+}
+.more-card p{
+  color: rgb(27, 242, 134);
+  font-size: 10px;
+  padding: 7px;
+}
+.more-card span{
+  color: #ddd;
+  margin: auto;
+  padding: 15px;
+  font-size: 11px;
+}
+.testimonial__1{
+  width: 80%;
+  margin-top: 20px;
+  font-style: italic;
+  cursor: pointer;
+  margin: auto;
+}
+.testimonial__1 h4{
+  color: rgb(27, 242, 134);
+  font-size: 17px;
+  font-weight: 500;
+}
+.work__1{
+   width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+.work__1 span{
+  color: #000;
+}
 }
